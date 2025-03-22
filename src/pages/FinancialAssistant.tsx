@@ -2,6 +2,7 @@
 import { CheckCircle, DollarSign, LineChart, Shield, AlertCircle } from 'lucide-react';
 import AssistantLayout from '../components/AssistantLayout';
 import AnimatedSection from '../components/AnimatedSection';
+import SimliAgent from '../components/SimliAgent';
 
 const FinancialAssistant = () => {
   return (
@@ -13,6 +14,14 @@ const FinancialAssistant = () => {
       nextLabel="Teacher Assistant"
     >
       <div className="space-y-8">
+        <AnimatedSection className="bg-white p-6 rounded-xl shadow-sm">
+          <h3 className="text-xl font-medium mb-4">Talk to the Assistant</h3>
+          <SimliAgent 
+            persona="financial" 
+            className="w-full min-h-[500px] rounded-lg border border-yunomi-beige bg-white"
+          />
+        </AnimatedSection>
+      
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="bg-white p-6 rounded-xl shadow-sm">
             <DollarSign className="w-6 h-6 text-yunomi-brown mb-3" />
