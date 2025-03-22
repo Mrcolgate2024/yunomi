@@ -47,6 +47,7 @@ const SupportAssistant = () => {
         position: "Customer Experience Manager",
         company: "Stellar Services Inc."
       }}
+      includeSimliAgent={true}
     />
   );
 };

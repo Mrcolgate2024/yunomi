@@ -6,7 +6,7 @@ const MarketingAssistant = () => {
   return (
     <GenericAssistantPage
       title="Marketing Assistant"
-      subtitle="Isabella creates compelling marketing campaigns with creative content development and audience engagement strategies."
+      subtitle="Mia creates compelling marketing campaigns with creative content development and audience engagement strategies."
       imageSrc="/lovable-uploads/ade8ef94-62c9-4502-8584-f2f96f206050.png"
       previousPath="/assistant/procurement"
       previousLabel="Procurement Assistant"
@@ -42,11 +42,12 @@ const MarketingAssistant = () => {
         { text: "Maintain brand voice consistency across all marketing communications" }
       ]}
       testimonial={{
-        quote: "Isabella has transformed our marketing capabilities by bringing both creative vision and analytical insight to our campaigns. Her ability to craft compelling content while maintaining brand authenticity has significantly increased our engagement metrics and conversion rates.",
+        quote: "Mia has transformed our marketing capabilities by bringing both creative vision and analytical insight to our campaigns. Her ability to craft compelling content while maintaining brand authenticity has significantly increased our engagement metrics and conversion rates.",
         name: "Sophia Martinez",
         position: "Marketing Director",
         company: "Elevate Brands"
       }}
+      includeSimliAgent={true}
     />
   );
 };

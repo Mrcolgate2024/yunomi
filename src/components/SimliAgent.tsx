@@ -1,5 +1,5 @@
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 interface SimliAgentProps {
   persona: 'financial' | 'teacher' | 'hr' | 'legal' | 'sales' | 'procurement' | 'marketing' | 'support';
@@ -9,6 +9,7 @@ interface SimliAgentProps {
 const SimliAgent = ({ persona, className = '' }: SimliAgentProps) => {
   // The API key should be handled more securely in a production environment
   const API_KEY = "sy105wgoenddakbuzsr97";
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Create and inject the Simli script
@@ -17,19 +18,35 @@ const SimliAgent = ({ persona, className = '' }: SimliAgentProps) => {
     script.async = true;
     script.defer = true;
     document.body.appendChild(script);
+    
+    // Create the simli-agent element after the script has loaded
+    script.onload = () => {
+      if (containerRef.current) {
+        // Clear container first
+        containerRef.current.innerHTML = '';
+        
+        // Create the element
+        const simliElement = document.createElement('simli-agent');
+        simliElement.setAttribute('api-key', API_KEY);
+        simliElement.setAttribute('persona', persona);
+        
+        // Append to container
+        containerRef.current.appendChild(simliElement);
+      }
+    };
 
     // Clean up on unmount
     return () => {
       document.body.removeChild(script);
+      if (containerRef.current) {
+        containerRef.current.innerHTML = '';
+      }
     };
-  }, []);
+  }, [persona]);
 
   return (
-    <div className={`simli-agent-container ${className}`}>
-      <simli-agent 
-        api-key={API_KEY} 
-        persona={persona}
-      />
+    <div ref={containerRef} className={`simli-agent-container ${className}`}>
+      {/* simli-agent will be created here dynamically */}
     </div>
   );
 };
