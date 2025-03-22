@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -24,7 +23,7 @@ const AssistantCard = ({ name, role, imgSrc, path, delay = 0 }: AssistantCardPro
       onMouseLeave={() => setIsHovered(false)}
     >
       <Link to={path} className="block">
-        <div className="relative overflow-hidden rounded-full mx-auto w-48 h-48 md:w-56 md:h-56 shadow-md">
+        <div className="relative overflow-hidden rounded-full mx-auto w-36 h-36 sm:w-48 sm:h-48 md:w-56 md:h-56 shadow-md">
           <img
             src={imgSrc}
             alt={`${role} Assistant`}

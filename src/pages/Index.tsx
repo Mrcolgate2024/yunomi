@@ -117,7 +117,7 @@ const Index = () => {
             { className: "text-center mb-16" }
           )}
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-12">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 sm:gap-x-8 gap-y-12">
             {assistants.map((assistant, index) => (
               <AssistantCard 
                 key={assistant.name}
@@ -227,7 +227,7 @@ const Index = () => {
                 </div>
                 
                 <a
-                  href="https://yunomi.lovable.app"
+                  href="https://stashly.lovable.app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center px-6 py-3 bg-yunomi-brown text-white rounded-full font-medium transition-all duration-300 transform hover:shadow-lg hover:translate-y-[-2px] focus:outline-none focus:ring-2 focus:ring-yunomi-brown focus:ring-opacity-50"
