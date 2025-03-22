@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight, LightbulbIcon, Heart, Target, Globe, Play } from 'lucide-react';
@@ -10,12 +9,10 @@ import AssistantCard from '../components/AssistantCard';
 const Index = () => {
   const assistantsRef = useRef<HTMLDivElement>(null);
   
-  // Scroll to assistants section
   const scrollToAssistants = () => {
     assistantsRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  // Assistant data with updated names and roles as requested
   const assistants = [
     { name: 'Ashley', role: 'Financial Assistant', imgSrc: '/lovable-uploads/d237131e-351c-4178-a758-18e9019460bb.png', path: '/assistant/financial' },
     { name: 'Ava', role: 'Teacher', imgSrc: '/lovable-uploads/87c1bcf7-53cf-40d1-bfc1-960b0231bb87.png', path: '/assistant/teacher' },
@@ -27,7 +24,6 @@ const Index = () => {
     { name: 'Zoe', role: 'Customer Support', imgSrc: '/lovable-uploads/b9458b49-1735-4cd7-8360-3c75de3b8a27.png', path: '/assistant/support' },
   ];
 
-  // Loading animation
   useEffect(() => {
     document.body.style.opacity = '0';
     setTimeout(() => {
@@ -45,7 +41,6 @@ const Index = () => {
     <div className="min-h-screen bg-yunomi-cream">
       <Navbar />
       
-      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center pt-20">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div 
@@ -93,7 +88,6 @@ const Index = () => {
         </div>
       </section>
       
-      {/* Assistants Section */}
       <section ref={assistantsRef} className="section-padding bg-white">
         <div className="yunomi-container">
           <AnimatedSection className="text-center mb-16">
@@ -119,7 +113,6 @@ const Index = () => {
         </div>
       </section>
       
-      {/* Philosophy Section */}
       <section className="section-padding bg-yunomi-cream">
         <div className="yunomi-container">
           <AnimatedSection className="text-center mb-16">
@@ -166,7 +159,6 @@ const Index = () => {
         </div>
       </section>
       
-      {/* Stashly Demo Section */}
       <section className="section-padding bg-white">
         <div className="yunomi-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -233,7 +225,6 @@ const Index = () => {
         </div>
       </section>
       
-      {/* CTA Section */}
       <section className="py-20 bg-yunomi-cream bg-opacity-50 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-10">
           <img 

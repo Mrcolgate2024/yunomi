@@ -1,7 +1,6 @@
 
 import { Users, FileText, Search, Clock } from 'lucide-react';
 import GenericAssistantPage from '../components/GenericAssistantPage';
-import SimliAgent from '../components/SimliAgent';
 
 const HRAssistant = () => {
   return (
