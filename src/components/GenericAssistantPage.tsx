@@ -2,7 +2,6 @@
 import { CheckCircle } from 'lucide-react';
 import AssistantLayout from './AssistantLayout';
 import AnimatedSection from './AnimatedSection';
-import SimliAgent from './SimliAgent';
 
 interface FeatureItem {
   icon: React.ReactNode;
@@ -32,7 +31,6 @@ interface GenericAssistantPageProps {
   previousLabel?: string;
   nextPath?: string;
   nextLabel?: string;
-  includeSimliAgent?: boolean;
 }
 
 const GenericAssistantPage = ({
@@ -46,21 +44,7 @@ const GenericAssistantPage = ({
   previousLabel,
   nextPath,
   nextLabel,
-  includeSimliAgent = false,
 }: GenericAssistantPageProps) => {
-  // Extract persona from title
-  const getPersona = () => {
-    if (title.toLowerCase().includes('financial')) return 'financial';
-    if (title.toLowerCase().includes('teacher')) return 'teacher';
-    if (title.toLowerCase().includes('hr')) return 'hr';
-    if (title.toLowerCase().includes('legal')) return 'legal';
-    if (title.toLowerCase().includes('sales')) return 'sales';
-    if (title.toLowerCase().includes('procurement')) return 'procurement';
-    if (title.toLowerCase().includes('marketing')) return 'marketing';
-    if (title.toLowerCase().includes('support')) return 'support';
-    return 'financial'; // Default
-  };
-
   return (
     <AssistantLayout
       title={title}
@@ -72,16 +56,6 @@ const GenericAssistantPage = ({
       nextLabel={nextLabel}
     >
       <div className="space-y-8">
-        {includeSimliAgent && (
-          <AnimatedSection className="bg-white p-6 rounded-xl shadow-sm">
-            <h3 className="text-xl font-medium mb-4">Talk to the Assistant</h3>
-            <SimliAgent 
-              persona={getPersona()} 
-              className="w-full min-h-[500px] rounded-lg border border-yunomi-beige bg-white"
-            />
-          </AnimatedSection>
-        )}
-        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {features.map((feature, index) => (
             <div key={index} className="bg-white p-6 rounded-xl shadow-sm">

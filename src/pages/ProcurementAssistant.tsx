@@ -6,7 +6,7 @@ const ProcurementAssistant = () => {
   return (
     <GenericAssistantPage
       title="Procurement Assistant"
-      subtitle="Olivia optimizes procurement processes with supplier management and cost-effective purchasing strategies."
+      subtitle="Ava optimizes procurement processes with supplier management and cost-effective purchasing strategies."
       imageSrc="/lovable-uploads/ec8d98cf-0922-47f0-b0e8-242798f1623d.png"
       previousPath="/assistant/sales"
       previousLabel="Sales Assistant"
@@ -42,12 +42,11 @@ const ProcurementAssistant = () => {
         { text: "Maintain comprehensive procurement documentation and reporting" }
       ]}
       testimonial={{
-        quote: "Olivia has revolutionized our procurement function by combining analytical precision with exceptional relationship management skills. She's helped us achieve significant cost savings while maintaining strong supplier relationships and ensuring our inventory needs are consistently met.",
+        quote: "Ava has revolutionized our procurement function by combining analytical precision with exceptional relationship management skills. She's helped us achieve significant cost savings while maintaining strong supplier relationships and ensuring our inventory needs are consistently met.",
         name: "Thomas Wilson",
         position: "Supply Chain Director",
         company: "Global Manufacturing Inc."
       }}
-      includeSimliAgent={true}
     />
   );
 };

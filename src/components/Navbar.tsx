@@ -1,103 +1,114 @@
 
 import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import YunomiLogo from './YunomiLogo';
-import { useIsMobile } from "../hooks/use-mobile";
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const isMobile = useIsMobile();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
-  // Toggle mobile menu
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  
-  // Close menu when route changes
-  useEffect(() => {
-    setIsMenuOpen(false);
-  }, [location]);
-  
-  // Add shadow on scroll
+  // Navigation items array
+  const navItems = [
+    { name: 'Home', path: '/' },
+    { name: 'Financial', path: '/assistant/financial' },
+    { name: 'Teacher', path: '/assistant/teacher' },
+    { name: 'HR', path: '/assistant/hr' },
+    { name: 'Legal', path: '/assistant/legal' },
+    { name: 'Sales', path: '/assistant/sales' },
+    { name: 'Procurement', path: '/assistant/procurement' },
+    { name: 'Marketing', path: '/assistant/marketing' },
+    { name: 'Support', path: '/assistant/support' },
+  ];
+
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  
+
+  useEffect(() => {
+    // Close mobile menu when route changes
+    setIsMobileMenuOpen(false);
+  }, [location.pathname]);
+
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-sm shadow-sm' : 'bg-transparent'}`}>
-      <div className="yunomi-container py-4 flex items-center justify-between">
-        <Link to="/" className="flex items-center space-x-2">
-          <YunomiLogo size={36} />
-          <span className="text-lg font-medium">Yunomi</span>
-        </Link>
-        
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-1">
-          <Link to="/assistant/financial" className="py-2 px-3 rounded-md hover:bg-yunomi-cream/50 transition-colors">
-            Assistants
+    <header 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-white/80 backdrop-blur-md shadow-sm py-3' 
+          : 'bg-transparent py-5'
+      }`}
+    >
+      <div className="yunomi-container">
+        <nav className="flex justify-between items-center">
+          <Link 
+            to="/" 
+            className="flex items-center"
+          >
+            <span className="text-2xl font-display font-semibold tracking-tight">YUNOMI</span>
           </Link>
-          <a 
-            href="https://stashly.lovable.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="py-2 px-3 rounded-md hover:bg-yunomi-cream/50 transition-colors"
-          >
-            Stashly Demo
-          </a>
-          <a 
-            href="mailto:contact@yunomi.ai"
-            className="ml-2 px-4 py-2 bg-yunomi-brown text-white rounded-full text-sm hover:bg-yunomi-dark-brown transition-colors"
-          >
-            Contact Us
-          </a>
-        </div>
-        
-        {/* Mobile Menu Button */}
-        <button 
-          onClick={toggleMenu}
-          className="md:hidden p-2 rounded-md hover:bg-yunomi-cream/50 transition-colors"
-          aria-label="Toggle Menu"
-        >
-          {isMenuOpen ? <X /> : <Menu />}
-        </button>
-      </div>
-      
-      {/* Mobile Menu */}
-      {(isMobile && isMenuOpen) && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-md animate-slide-down">
-          <div className="yunomi-container py-4 flex flex-col space-y-3">
-            <Link 
-              to="/assistant/financial" 
-              className="py-3 px-4 rounded-md hover:bg-yunomi-cream/50 transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Assistants
-            </Link>
-            <a 
-              href="https://stashly.lovable.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="py-3 px-4 rounded-md hover:bg-yunomi-cream/50 transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Stashly Demo
-            </a>
-            <a 
-              href="mailto:contact@yunomi.ai"
-              className="py-3 px-4 rounded-md hover:bg-yunomi-cream/50 transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Contact Us
-            </a>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navItems.slice(1).map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                className={`text-sm font-medium transition-all duration-300 hover:text-yunomi-brown ${
+                  location.pathname === item.path
+                    ? 'text-yunomi-brown'
+                    : 'text-gray-600'
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
           </div>
-        </div>
-      )}
-    </nav>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="md:hidden text-gray-700 p-2"
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
+          </button>
+        </nav>
+
+        {/* Mobile Navigation */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden py-4 animate-fade-in-down">
+            <div className="flex flex-col space-y-4">
+              {navItems.map((item) => (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  className={`py-2 px-4 text-sm font-medium transition-colors rounded-md ${
+                    location.pathname === item.path
+                      ? 'bg-yunomi-beige text-yunomi-brown'
+                      : 'text-gray-600 hover:bg-gray-100'
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </header>
   );
 };
 

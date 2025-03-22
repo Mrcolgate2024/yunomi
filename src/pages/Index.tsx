@@ -1,3 +1,4 @@
+
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight, LightbulbIcon, Heart, Target, Globe, Play } from 'lucide-react';
@@ -9,21 +10,24 @@ import AssistantCard from '../components/AssistantCard';
 const Index = () => {
   const assistantsRef = useRef<HTMLDivElement>(null);
   
+  // Scroll to assistants section
   const scrollToAssistants = () => {
     assistantsRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  // Assistant data
   const assistants = [
-    { name: 'Ashley', role: 'Financial Assistant', imgSrc: '/lovable-uploads/d237131e-351c-4178-a758-18e9019460bb.png', path: '/assistant/financial' },
-    { name: 'Ava', role: 'Teacher', imgSrc: '/lovable-uploads/87c1bcf7-53cf-40d1-bfc1-960b0231bb87.png', path: '/assistant/teacher' },
-    { name: 'Bjorn', role: 'HR/Recruitment', imgSrc: '/lovable-uploads/f982c37f-6bf3-4f34-bc36-602b3f3cc737.png', path: '/assistant/hr' },
-    { name: 'Emma', role: 'Legal Assistant', imgSrc: '/lovable-uploads/8c0f54dc-423f-4dc7-a6c2-12a648e47173.png', path: '/assistant/legal' },
-    { name: 'Sophia', role: 'Sales Assistant', imgSrc: '/lovable-uploads/ba0fb488-acc4-467b-b1f2-d9572498eabe.png', path: '/assistant/sales' },
-    { name: 'Olivia', role: 'Procurement', imgSrc: '/lovable-uploads/ec8d98cf-0922-47f0-b0e8-242798f1623d.png', path: '/assistant/procurement' },
-    { name: 'Mia', role: 'Marketing', imgSrc: '/lovable-uploads/ade8ef94-62c9-4502-8584-f2f96f206050.png', path: '/assistant/marketing' },
+    { name: 'Sophia', role: 'Financial Assistant', imgSrc: '/lovable-uploads/d237131e-351c-4178-a758-18e9019460bb.png', path: '/assistant/financial' },
+    { name: 'Emma', role: 'Teacher', imgSrc: '/lovable-uploads/87c1bcf7-53cf-40d1-bfc1-960b0231bb87.png', path: '/assistant/teacher' },
+    { name: 'Mia', role: 'HR/Recruitment', imgSrc: '/lovable-uploads/f982c37f-6bf3-4f34-bc36-602b3f3cc737.png', path: '/assistant/hr' },
+    { name: 'Olivia', role: 'Legal Assistant', imgSrc: '/lovable-uploads/8c0f54dc-423f-4dc7-a6c2-12a648e47173.png', path: '/assistant/legal' },
+    { name: 'William', role: 'Sales Assistant', imgSrc: '/lovable-uploads/ba0fb488-acc4-467b-b1f2-d9572498eabe.png', path: '/assistant/sales' },
+    { name: 'Ava', role: 'Procurement', imgSrc: '/lovable-uploads/ec8d98cf-0922-47f0-b0e8-242798f1623d.png', path: '/assistant/procurement' },
+    { name: 'Isabella', role: 'Marketing', imgSrc: '/lovable-uploads/ade8ef94-62c9-4502-8584-f2f96f206050.png', path: '/assistant/marketing' },
     { name: 'Zoe', role: 'Customer Support', imgSrc: '/lovable-uploads/b9458b49-1735-4cd7-8360-3c75de3b8a27.png', path: '/assistant/support' },
   ];
 
+  // Loading animation
   useEffect(() => {
     document.body.style.opacity = '0';
     setTimeout(() => {
@@ -41,6 +45,7 @@ const Index = () => {
     <div className="min-h-screen bg-yunomi-cream">
       <Navbar />
       
+      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center pt-20">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div 
@@ -88,6 +93,7 @@ const Index = () => {
         </div>
       </section>
       
+      {/* Assistants Section */}
       <section ref={assistantsRef} className="section-padding bg-white">
         <div className="yunomi-container">
           <AnimatedSection className="text-center mb-16">
@@ -113,6 +119,7 @@ const Index = () => {
         </div>
       </section>
       
+      {/* Philosophy Section */}
       <section className="section-padding bg-yunomi-cream">
         <div className="yunomi-container">
           <AnimatedSection className="text-center mb-16">
@@ -159,6 +166,7 @@ const Index = () => {
         </div>
       </section>
       
+      {/* Stashly Demo Section */}
       <section className="section-padding bg-white">
         <div className="yunomi-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -209,7 +217,7 @@ const Index = () => {
                 <div className="absolute -inset-4 bg-white rounded-2xl transform -rotate-2 opacity-70"></div>
                 <div className="relative rounded-xl overflow-hidden shadow-xl">
                   <img 
-                    src="/lovable-uploads/d237131e-351c-4178-a758-18e9019460bb.png" 
+                    src="/lovable-uploads/1e2074aa-1874-4d73-b503-44b7e26e5876.png" 
                     alt="Stashly Demo" 
                     className="w-full h-auto"
                   />
@@ -225,6 +233,7 @@ const Index = () => {
         </div>
       </section>
       
+      {/* CTA Section */}
       <section className="py-20 bg-yunomi-cream bg-opacity-50 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-10">
           <img 

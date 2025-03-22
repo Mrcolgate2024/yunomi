@@ -2,26 +2,17 @@
 import { CheckCircle, DollarSign, LineChart, Shield, AlertCircle } from 'lucide-react';
 import AssistantLayout from '../components/AssistantLayout';
 import AnimatedSection from '../components/AnimatedSection';
-import SimliAgent from '../components/SimliAgent';
 
 const FinancialAssistant = () => {
   return (
     <AssistantLayout
       title="Financial Assistant"
-      subtitle="Ashley helps navigate complex financial decisions with clarity and personalized guidance."
+      subtitle="Sophia helps navigate complex financial decisions with clarity and personalized guidance."
       imageSrc="/lovable-uploads/d237131e-351c-4178-a758-18e9019460bb.png"
       nextPath="/assistant/teacher"
       nextLabel="Teacher Assistant"
     >
       <div className="space-y-8">
-        <AnimatedSection className="bg-white p-6 rounded-xl shadow-sm">
-          <h3 className="text-xl font-medium mb-4">Talk to the Assistant</h3>
-          <SimliAgent 
-            persona="financial" 
-            className="w-full min-h-[500px] rounded-lg border border-yunomi-beige bg-white"
-          />
-        </AnimatedSection>
-      
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="bg-white p-6 rounded-xl shadow-sm">
             <DollarSign className="w-6 h-6 text-yunomi-brown mb-3" />
@@ -49,7 +40,7 @@ const FinancialAssistant = () => {
         </div>
         
         <AnimatedSection delay={200}>
-          <h3 className="text-xl font-medium mb-4">How Ashley Can Help Your Business</h3>
+          <h3 className="text-xl font-medium mb-4">How Sophia Can Help Your Business</h3>
           <div className="space-y-3">
             <div className="flex items-start">
               <CheckCircle className="w-5 h-5 text-yunomi-brown flex-shrink-0 mt-0.5" />
@@ -78,7 +69,7 @@ const FinancialAssistant = () => {
           <blockquote className="relative">
             <div className="text-3xl text-yunomi-brown opacity-30 absolute top-0 left-0">"</div>
             <p className="text-gray-600 italic text-lg pl-6">
-              Ashley has transformed how we approach financial planning with our clients. Her warmth and expertise make complex financial concepts accessible, while her instant access to data gives our clients confidence in their financial decisions.
+              Sophia has transformed how we approach financial planning with our clients. Her warmth and expertise make complex financial concepts accessible, while her instant access to data gives our clients confidence in their financial decisions.
             </p>
             <footer className="mt-4 pl-6">
               <p className="text-sm font-medium">— Michael Chen, Financial Advisor</p>

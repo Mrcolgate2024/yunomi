@@ -6,7 +6,7 @@ const HRAssistant = () => {
   return (
     <GenericAssistantPage
       title="HR/Recruitment Assistant"
-      subtitle="Bjorn streamlines recruitment processes and enhances employee experiences with personalized HR support."
+      subtitle="Mia streamlines recruitment processes and enhances employee experiences with personalized HR support."
       imageSrc="/lovable-uploads/f982c37f-6bf3-4f34-bc36-602b3f3cc737.png"
       previousPath="/assistant/teacher"
       previousLabel="Teacher Assistant"
@@ -42,12 +42,11 @@ const HRAssistant = () => {
         { text: "Ensure compliance with HR regulations and company policies" }
       ]}
       testimonial={{
-        quote: "Bjorn has transformed our HR department's efficiency while maintaining the human touch our employees value. From recruitment to onboarding, he handles complex processes with precision while ensuring every candidate and employee feels personally attended to.",
+        quote: "Mia has transformed our HR department's efficiency while maintaining the human touch our employees value. From recruitment to onboarding, she handles complex processes with precision while ensuring every candidate and employee feels personally attended to.",
         name: "Jennifer Liu",
         position: "Chief People Officer",
         company: "Nexus Technologies"
       }}
-      includeSimliAgent={true}
     />
   );
 };
