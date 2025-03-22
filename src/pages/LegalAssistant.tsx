@@ -1,4 +1,3 @@
-
 import { Scale, FileText, Search, Shield } from 'lucide-react';
 import GenericAssistantPage from '../components/GenericAssistantPage';
 
@@ -6,8 +5,8 @@ const LegalAssistant = () => {
   return (
     <GenericAssistantPage
       title="Legal Assistant"
-      subtitle="Olivia provides comprehensive legal support with meticulous document preparation and research capabilities."
-      imageSrc="/lovable-uploads/8c0f54dc-423f-4dc7-a6c2-12a648e47173.png"
+      subtitle="Emma provides comprehensive legal support with meticulous document preparation and research capabilities."
+      imageSrc="/lovable-uploads/87c1bcf7-53cf-40d1-bfc1-960b0231bb87.png"
       previousPath="/assistant/hr"
       previousLabel="HR Assistant"
       nextPath="/assistant/sales"
@@ -42,7 +41,7 @@ const LegalAssistant = () => {
         { text: "Ensure compliance with evolving legal regulations" }
       ]}
       testimonial={{
-        quote: "Olivia has become an indispensable member of our legal team. Her ability to efficiently handle complex document preparation while maintaining the professional, reassuring demeanor our clients expect has significantly enhanced our practice's reputation and efficiency.",
+        quote: "Emma has become an indispensable member of our legal team. Her ability to efficiently handle complex document preparation while maintaining the professional, reassuring demeanor our clients expect has significantly enhanced our practice's reputation and efficiency.",
         name: "Daniel Rodriguez",
         position: "Managing Partner",
         company: "Rodriguez & Associates Law Firm"
