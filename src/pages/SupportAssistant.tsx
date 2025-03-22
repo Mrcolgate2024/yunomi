@@ -1,4 +1,3 @@
-
 import { MessageCircle, LifeBuoy, Clock, ThumbsUp } from 'lucide-react';
 import GenericAssistantPage from '../components/GenericAssistantPage';
 
@@ -6,8 +5,8 @@ const SupportAssistant = () => {
   return (
     <GenericAssistantPage
       title="Customer Support Assistant"
-      subtitle="Zoe provides exceptional customer service with personalized support and efficient problem resolution."
-      imageSrc="/lovable-uploads/b9458b49-1735-4cd7-8360-3c75de3b8a27.png"
+      subtitle="Zoe enhances customer satisfaction through empathetic problem-solving and efficient issue resolution."
+      imageSrc="/lovable-uploads/1e2074aa-1874-4d73-b503-44b7e26e5876.png"
       previousPath="/assistant/marketing"
       previousLabel="Marketing Assistant"
       nextPath="/"

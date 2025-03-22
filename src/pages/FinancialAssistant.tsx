@@ -1,4 +1,3 @@
-
 import { CheckCircle, DollarSign, LineChart, Shield, AlertCircle } from 'lucide-react';
 import AssistantLayout from '../components/AssistantLayout';
 import AnimatedSection from '../components/AnimatedSection';
@@ -7,8 +6,8 @@ const FinancialAssistant = () => {
   return (
     <AssistantLayout
       title="Financial Assistant"
-      subtitle="Sophia helps navigate complex financial decisions with clarity and personalized guidance."
-      imageSrc="/lovable-uploads/d237131e-351c-4178-a758-18e9019460bb.png"
+      subtitle="Ashley helps navigate complex financial decisions with clarity and personalized guidance."
+      imageSrc="/lovable-uploads/8e6ce1d4-5959-4e26-8aa5-85f1849e107f.png"
       nextPath="/assistant/teacher"
       nextLabel="Teacher Assistant"
     >

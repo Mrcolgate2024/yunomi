@@ -1,4 +1,3 @@
-
 import { TrendingUp, Users, Presentation, BarChart } from 'lucide-react';
 import GenericAssistantPage from '../components/GenericAssistantPage';
 
@@ -6,7 +5,7 @@ const SalesAssistant = () => {
   return (
     <GenericAssistantPage
       title="Sales Assistant"
-      subtitle="William enhances sales processes with personalized prospect engagement and data-driven insights."
+      subtitle="Sophia enhances sales processes with personalized prospect engagement and data-driven insights."
       imageSrc="/lovable-uploads/ba0fb488-acc4-467b-b1f2-d9572498eabe.png"
       previousPath="/assistant/legal"
       previousLabel="Legal Assistant"
@@ -42,7 +41,7 @@ const SalesAssistant = () => {
         { text: "Build and nurture long-term client relationships through attentive follow-up" }
       ]}
       testimonial={{
-        quote: "William has transformed our sales operations by combining data-driven insights with a genuinely personable approach to client interactions. Our prospects receive consistent, thoughtful communication, and our team has access to deeper insights about client needs and sales performance.",
+        quote: "Sophia has transformed our sales operations by combining data-driven insights with a genuinely personable approach to client interactions. Our prospects receive consistent, thoughtful communication, and our team has access to deeper insights about client needs and sales performance.",
         name: "Robert Thompson",
         position: "VP of Sales",
         company: "Horizon Solutions"

@@ -1,4 +1,3 @@
-
 import { BookOpen, GraduationCap, Award, Users } from 'lucide-react';
 import GenericAssistantPage from '../components/GenericAssistantPage';
 
@@ -6,8 +5,8 @@ const TeacherAssistant = () => {
   return (
     <GenericAssistantPage
       title="Teacher Assistant"
-      subtitle="Emma provides educational support with personalized learning strategies and curriculum development."
-      imageSrc="/lovable-uploads/87c1bcf7-53cf-40d1-bfc1-960b0231bb87.png"
+      subtitle="Ava provides educational support with personalized learning strategies and curriculum development."
+      imageSrc="/lovable-uploads/ec8d98cf-0922-47f0-b0e8-242798f1623d.png"
       previousPath="/assistant/financial"
       previousLabel="Financial Assistant"
       nextPath="/assistant/hr"
@@ -42,7 +41,7 @@ const TeacherAssistant = () => {
         { text: "Provide consistent support to both educators and students" }
       ]}
       testimonial={{
-        quote: "Emma has revolutionized how we approach personalized learning. Her ability to craft tailored educational materials while maintaining a warm, engaging presence has significantly improved student outcomes and teacher satisfaction.",
+        quote: "Ava has revolutionized how we approach personalized learning. Her ability to craft tailored educational materials while maintaining a warm, engaging presence has significantly improved student outcomes and teacher satisfaction.",
         name: "Dr. Sarah Johnson",
         position: "Educational Director",
         company: "Pioneer Learning Academy"
