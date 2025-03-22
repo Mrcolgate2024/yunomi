@@ -94,7 +94,7 @@ const Index = () => {
       </section>
       
       {/* Assistants Section */}
-      <section ref={assistantsRef} className="section-padding bg-white">
+      <section ref={assistantsRef} className="section-padding with-background-logo">
         <div className="yunomi-container">
           <AnimatedSection className="text-center mb-16">
             <span className="inline-block px-3 py-1 text-xs font-medium bg-yunomi-beige text-yunomi-brown rounded-full mb-3">Our Team</span>
@@ -120,7 +120,7 @@ const Index = () => {
       </section>
       
       {/* Philosophy Section */}
-      <section className="section-padding bg-yunomi-cream">
+      <section className="section-padding with-background-logo">
         <div className="yunomi-container">
           <AnimatedSection className="text-center mb-16">
             <span className="inline-block px-3 py-1 text-xs font-medium bg-white text-yunomi-brown rounded-full mb-3">Our Approach</span>
@@ -167,7 +167,7 @@ const Index = () => {
       </section>
       
       {/* Stashly Demo Section */}
-      <section className="section-padding bg-white">
+      <section className="section-padding with-background-logo">
         <div className="yunomi-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <AnimatedSection animation="slide-in-left" className="order-2 lg:order-1">
@@ -234,7 +234,7 @@ const Index = () => {
       </section>
       
       {/* CTA Section */}
-      <section className="py-20 bg-yunomi-cream bg-opacity-50 relative overflow-hidden">
+      <section className="py-20 with-background-logo relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-10">
           <img 
             src="/lovable-uploads/8e6ce1d4-5959-4e26-8aa5-85f1849e107f.png" 

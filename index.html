@@ -21,9 +21,27 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@yunomi_ai" />
     <meta name="twitter:image" content="/lovable-uploads/b89ee6c2-b235-47e7-b922-6f61132c6edd.png" />
+    
+    <style>
+      .logo-background {
+        background-image: url('/logotype.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        opacity: 0.1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        pointer-events: none;
+      }
+    </style>
   </head>
 
   <body>
+    <div class="logo-background"></div>
     <div id="root"></div>
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>

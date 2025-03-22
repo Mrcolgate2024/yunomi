@@ -120,4 +120,8 @@
   .page-transition {
     @apply animate-fade-in;
   }
+  
+  .with-background-logo {
+    @apply bg-white/80 backdrop-blur-sm;
+  }
 }
