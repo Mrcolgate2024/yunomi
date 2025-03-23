@@ -5,7 +5,7 @@ const TeacherAssistant = () => {
   return (
     <GenericAssistantPage
       title="Teacher Assistant"
-      subtitle="Ava provides educational support with personalized learning strategies and curriculum development."
+      subtitle="Imani provides educational support with personalized learning strategies and curriculum development."
       imageSrc="/lovable-uploads/ec8d98cf-0922-47f0-b0e8-242798f1623d.png"
       previousPath="/assistant/financial"
       previousLabel="Financial Assistant"
@@ -41,7 +41,7 @@ const TeacherAssistant = () => {
         { text: "Provide consistent support to both educators and students" }
       ]}
       testimonial={{
-        quote: "Ava has revolutionized how we approach personalized learning. Her ability to craft tailored educational materials while maintaining a warm, engaging presence has significantly improved student outcomes and teacher satisfaction.",
+        quote: "Imani has revolutionized how we approach personalized learning. Her ability to craft tailored educational materials while maintaining a warm, engaging presence has significantly improved student outcomes and teacher satisfaction.",
         name: "Dr. Sarah Johnson",
         position: "Educational Director",
         company: "Pioneer Learning Academy"

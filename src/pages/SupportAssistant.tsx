@@ -5,7 +5,7 @@ const SupportAssistant = () => {
   return (
     <GenericAssistantPage
       title="Customer Support Assistant"
-      subtitle="Zoe enhances customer satisfaction through empathetic problem-solving and efficient issue resolution."
+      subtitle="Aiko enhances customer satisfaction through empathetic problem-solving and efficient issue resolution."
       imageSrc="/lovable-uploads/1e2074aa-1874-4d73-b503-44b7e26e5876.png"
       previousPath="/assistant/marketing"
       previousLabel="Marketing Assistant"
@@ -41,7 +41,7 @@ const SupportAssistant = () => {
         { text: "Build customer loyalty through exceptional service experiences" }
       ]}
       testimonial={{
-        quote: "Zoe has elevated our customer support function to new heights. Her combination of empathy, problem-solving abilities, and consistent follow-through has not only resolved customer issues more efficiently but has transformed many interactions into opportunities for deeper customer relationships.",
+        quote: "Aiko has elevated our customer support function to new heights. Her combination of empathy, problem-solving abilities, and consistent follow-through has not only resolved customer issues more efficiently but has transformed many interactions into opportunities for deeper customer relationships.",
         name: "James Miller",
         position: "Customer Experience Manager",
         company: "Stellar Services Inc."

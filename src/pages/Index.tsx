@@ -16,14 +16,14 @@ const Index = () => {
 
   // Assistant data
   const assistants = [
-    { name: 'Bjorn', role: 'HR/Recruitment', imgSrc: '/lovable-uploads/d237131e-351c-4178-a758-18e9019460bb.png', path: '/assistant/hr' },
-    { name: 'Emma', role: 'Legal Assistant', imgSrc: '/lovable-uploads/87c1bcf7-53cf-40d1-bfc1-960b0231bb87.png', path: '/assistant/legal' },
-    { name: 'Mia', role: 'Marketing', imgSrc: '/lovable-uploads/f982c37f-6bf3-4f34-bc36-602b3f3cc737.png', path: '/assistant/marketing' },
-    { name: 'Olivia', role: 'Procurement', imgSrc: '/lovable-uploads/8c0f54dc-423f-4dc7-a6c2-12a648e47173.png', path: '/assistant/procurement' },
-    { name: 'Sophia', role: 'Sales Assistant', imgSrc: '/lovable-uploads/ba0fb488-acc4-467b-b1f2-d9572498eabe.png', path: '/assistant/sales' },
-    { name: 'Ava', role: 'Teacher', imgSrc: '/lovable-uploads/ec8d98cf-0922-47f0-b0e8-242798f1623d.png', path: '/assistant/teacher' },
-    { name: 'Ashley', role: 'Financial Assistant', imgSrc: '/lovable-uploads/8e6ce1d4-5959-4e26-8aa5-85f1849e107f.png', path: '/assistant/financial' },
-    { name: 'Zoe', role: 'Customer Support', imgSrc: '/lovable-uploads/1e2074aa-1874-4d73-b503-44b7e26e5876.png', path: '/assistant/support' },
+    { name: 'Claire', role: 'HR/Recruitment', imgSrc: '/lovable-uploads/d237131e-351c-4178-a758-18e9019460bb.png', path: '/assistant/hr' },
+    { name: 'Kenji', role: 'Legal Assistant', imgSrc: '/lovable-uploads/87c1bcf7-53cf-40d1-bfc1-960b0231bb87.png', path: '/assistant/legal' },
+    { name: 'Luna', role: 'Marketing', imgSrc: '/lovable-uploads/f982c37f-6bf3-4f34-bc36-602b3f3cc737.png', path: '/assistant/marketing' },
+    { name: 'Omar', role: 'Procurement', imgSrc: '/lovable-uploads/8c0f54dc-423f-4dc7-a6c2-12a648e47173.png', path: '/assistant/procurement' },
+    { name: 'Chase', role: 'Sales Assistant', imgSrc: '/lovable-uploads/ba0fb488-acc4-467b-b1f2-d9572498eabe.png', path: '/assistant/sales' },
+    { name: 'Imani', role: 'Teacher', imgSrc: '/lovable-uploads/ec8d98cf-0922-47f0-b0e8-242798f1623d.png', path: '/assistant/teacher' },
+    { name: 'Elijah', role: 'Financial Assistant', imgSrc: '/lovable-uploads/8e6ce1d4-5959-4e26-8aa5-85f1849e107f.png', path: '/assistant/financial' },
+    { name: 'Aiko', role: 'Customer Support', imgSrc: '/lovable-uploads/1e2074aa-1874-4d73-b503-44b7e26e5876.png', path: '/assistant/support' },
   ];
 
   // Loading animation

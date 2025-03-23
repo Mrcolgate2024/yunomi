@@ -5,7 +5,7 @@ const HRAssistant = () => {
   return (
     <GenericAssistantPage
       title="HR/Recruitment Assistant"
-      subtitle="Bjorn streamlines recruitment processes and enhances employee experiences with personalized HR support."
+      subtitle="Claire streamlines recruitment processes and enhances employee experiences with personalized HR support."
       imageSrc="/lovable-uploads/d237131e-351c-4178-a758-18e9019460bb.png"
       previousPath="/assistant/teacher"
       previousLabel="Teacher Assistant"
@@ -41,7 +41,7 @@ const HRAssistant = () => {
         { text: "Ensure compliance with HR regulations and company policies" }
       ]}
       testimonial={{
-        quote: "Bjorn has transformed our HR department's efficiency while maintaining the human touch our employees value. From recruitment to onboarding, he handles complex processes with precision while ensuring every candidate and employee feels personally attended to.",
+        quote: "Claire has transformed our HR department's efficiency while maintaining the human touch our employees value. From recruitment to onboarding, she handles complex processes with precision while ensuring every candidate and employee feels personally attended to.",
         name: "Jennifer Liu",
         position: "Chief People Officer",
         company: "Nexus Technologies"

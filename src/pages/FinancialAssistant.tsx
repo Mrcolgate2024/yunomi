@@ -6,7 +6,7 @@ const FinancialAssistant = () => {
   return (
     <AssistantLayout
       title="Financial Assistant"
-      subtitle="Ashley helps navigate complex financial decisions with clarity and personalized guidance."
+      subtitle="Elijah helps navigate complex financial decisions with clarity and personalized guidance."
       imageSrc="/lovable-uploads/8e6ce1d4-5959-4e26-8aa5-85f1849e107f.png"
       nextPath="/assistant/teacher"
       nextLabel="Teacher Assistant"
@@ -39,7 +39,7 @@ const FinancialAssistant = () => {
         </div>
         
         <AnimatedSection delay={200}>
-          <h3 className="text-xl font-medium mb-4">How Sophia Can Help Your Business</h3>
+          <h3 className="text-xl font-medium mb-4">How Elijah Can Help Your Business</h3>
           <div className="space-y-3">
             <div className="flex items-start">
               <CheckCircle className="w-5 h-5 text-yunomi-brown flex-shrink-0 mt-0.5" />
@@ -68,7 +68,7 @@ const FinancialAssistant = () => {
           <blockquote className="relative">
             <div className="text-3xl text-yunomi-brown opacity-30 absolute top-0 left-0">"</div>
             <p className="text-gray-600 italic text-lg pl-6">
-              Sophia has transformed how we approach financial planning with our clients. Her warmth and expertise make complex financial concepts accessible, while her instant access to data gives our clients confidence in their financial decisions.
+              Elijah has transformed how we approach financial planning with our clients. His warmth and expertise make complex financial concepts accessible, while his instant access to data gives our clients confidence in their financial decisions.
             </p>
             <footer className="mt-4 pl-6">
               <p className="text-sm font-medium">— Michael Chen, Financial Advisor</p>

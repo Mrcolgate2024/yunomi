@@ -5,7 +5,7 @@ const LegalAssistant = () => {
   return (
     <GenericAssistantPage
       title="Legal Assistant"
-      subtitle="Emma provides comprehensive legal support with meticulous document preparation and research capabilities."
+      subtitle="Kenji provides comprehensive legal support with meticulous document preparation and research capabilities."
       imageSrc="/lovable-uploads/87c1bcf7-53cf-40d1-bfc1-960b0231bb87.png"
       previousPath="/assistant/hr"
       previousLabel="HR Assistant"
@@ -41,7 +41,7 @@ const LegalAssistant = () => {
         { text: "Ensure compliance with evolving legal regulations" }
       ]}
       testimonial={{
-        quote: "Emma has become an indispensable member of our legal team. Her ability to efficiently handle complex document preparation while maintaining the professional, reassuring demeanor our clients expect has significantly enhanced our practice's reputation and efficiency.",
+        quote: "Kenji has become an indispensable member of our legal team. His ability to efficiently handle complex document preparation while maintaining the professional, reassuring demeanor our clients expect has significantly enhanced our practice's reputation and efficiency.",
         name: "Daniel Rodriguez",
         position: "Managing Partner",
         company: "Rodriguez & Associates Law Firm"

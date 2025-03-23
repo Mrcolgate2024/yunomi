@@ -5,7 +5,7 @@ const ProcurementAssistant = () => {
   return (
     <GenericAssistantPage
       title="Procurement Assistant"
-      subtitle="Olivia has revolutionized our procurement function by combining analytical precision with exceptional relationship management skills."
+      subtitle="Omar has revolutionized our procurement function by combining analytical precision with exceptional relationship management skills."
       imageSrc="/lovable-uploads/8c0f54dc-423f-4dc7-a6c2-12a648e47173.png"
       previousPath="/assistant/sales"
       previousLabel="Sales Assistant"
@@ -41,7 +41,7 @@ const ProcurementAssistant = () => {
         { text: "Maintain comprehensive procurement documentation and reporting" }
       ]}
       testimonial={{
-        quote: "Olivia has revolutionized our procurement function by combining analytical precision with exceptional relationship management skills. She's helped us achieve significant cost savings while maintaining strong supplier relationships and ensuring our inventory needs are consistently met.",
+        quote: "Omar has revolutionized our procurement function by combining analytical precision with exceptional relationship management skills. He's helped us achieve significant cost savings while maintaining strong supplier relationships and ensuring our inventory needs are consistently met.",
         name: "Thomas Wilson",
         position: "Supply Chain Director",
         company: "Global Manufacturing Inc."
