@@ -85,7 +85,7 @@ const Index = () => {
                 </button>
                 
                 <a
-                  href="https://yunomi.lovable.app"
+                  href="https://stashly.lovable.app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-3 border border-yunomi-brown text-yunomi-brown rounded-full font-medium flex items-center transition-all duration-300 hover:bg-yunomi-brown hover:text-white hover:shadow-lg hover:translate-y-[-2px] focus:outline-none focus:ring-2 focus:ring-yunomi-brown focus:ring-opacity-50"
