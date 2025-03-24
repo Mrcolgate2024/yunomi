@@ -6,6 +6,7 @@ import AnimatedSection from '../components/AnimatedSection';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import AssistantCard from '../components/AssistantCard';
+import CapabilityCarousel from '../components/CapabilityCarousel';
 
 const Index = () => {
   const assistantsRef = useRef<HTMLDivElement>(null);
@@ -23,6 +24,81 @@ const Index = () => {
     { name: 'Imani', role: 'Teacher', imgSrc: '/lovable-uploads/Imani.webp', path: '/assistant/teacher' },
     { name: 'Elijah', role: 'Financial Assistant', imgSrc: '/lovable-uploads/Elijah.webp', path: '/assistant/financial' },
     { name: 'Aiko', role: 'Customer Support', imgSrc: '/lovable-uploads/Aiko.webp', path: '/assistant/support' },
+  ];
+
+  const capabilities = [
+    {
+      title: "Talk to Your Data",
+      description: "Query structured and unstructured data — Excel sheets, PDFs, SQL databases — using natural language.",
+      icon: (
+        <svg className="w-6 h-6 text-yunomi-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+        </svg>
+      )
+    },
+    {
+      title: "Use Your Knowledge Base",
+      description: "Instantly access internal wikis, reports, FAQs, and documentation to provide grounded, company-specific answers.",
+      icon: (
+        <svg className="w-6 h-6 text-yunomi-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+        </svg>
+      )
+    },
+    {
+      title: "Connect to Internal Systems",
+      description: "Trigger workflows, interact with APIs, and retrieve real-time insights from dashboards and analytics tools.",
+      icon: (
+        <svg className="w-6 h-6 text-yunomi-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+      )
+    },
+    {
+      title: "Search the Web & Think Critically",
+      description: "Actively search the web, validate information, and synthesize research across sources — like a human analyst.",
+      icon: (
+        <svg className="w-6 h-6 text-yunomi-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+      )
+    },
+    {
+      title: "Collaborate Like a Teammate",
+      description: "Support strategic decisions with memory, feedback loops, and context awareness across use cases.",
+      icon: (
+        <svg className="w-6 h-6 text-yunomi-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+        </svg>
+      )
+    },
+    {
+      title: "Leverage the Full Power of LLMs",
+      description: "Go beyond chat — use LLMs for reasoning, summarization, simulations, comparisons, and agentic workflows.",
+      icon: (
+        <svg className="w-6 h-6 text-yunomi-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+        </svg>
+      )
+    },
+    {
+      title: "Stay Brand-Aligned",
+      description: "Assistants are emotionally intelligent, customizable in tone and personality, and always on-brand.",
+      icon: (
+        <svg className="w-6 h-6 text-yunomi-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+        </svg>
+      )
+    },
+    {
+      title: "Rich Interactive Experiences",
+      description: "Support rich, interactive experiences — from chat to voice to real-time video avatars — creating natural, humanlike interactions wherever your users are.",
+      icon: (
+        <svg className="w-6 h-6 text-yunomi-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+        </svg>
+      )
+    }
   ];
 
   useEffect(() => {
@@ -188,139 +264,6 @@ const Index = () => {
       
       <section className="section-padding with-background-logo">
         <div className="yunomi-container">
-          {renderAnimatedSection(
-            <>
-              <span className="inline-block px-3 py-1 text-xs font-medium bg-white text-yunomi-brown rounded-full mb-3">Capabilities</span>
-              <h2 className="text-3xl md:text-4xl font-display font-semibold mb-4">What Yunomi Assistants Can Do</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto mb-8">
-                Flexible, powerful, and deeply connected to your world.
-              </p>
-              <p className="text-gray-600 max-w-3xl mx-auto mb-12">
-                From talking to your private data to conducting live web research — Yunomi assistants combine the intelligence of large language models with your unique tools, knowledge, and systems.
-              </p>
-            </>,
-            { className: "text-center mb-16" }
-          )}
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {renderAnimatedSection(
-              <>
-                <div className="w-12 h-12 flex items-center justify-center bg-yunomi-beige rounded-full mb-6">
-                  <svg className="w-6 h-6 text-yunomi-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-medium mb-3">Talk to Your Data</h3>
-                <p className="text-gray-600">Query structured and unstructured data — Excel sheets, PDFs, SQL databases — using natural language.</p>
-              </>,
-              { delay: 100, className: "bg-white p-8 rounded-2xl shadow-sm" }
-            )}
-            
-            {renderAnimatedSection(
-              <>
-                <div className="w-12 h-12 flex items-center justify-center bg-yunomi-beige rounded-full mb-6">
-                  <svg className="w-6 h-6 text-yunomi-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-medium mb-3">Use Your Knowledge Base</h3>
-                <p className="text-gray-600">Instantly access internal wikis, reports, FAQs, and documentation to provide grounded, company-specific answers.</p>
-              </>,
-              { delay: 200, className: "bg-white p-8 rounded-2xl shadow-sm" }
-            )}
-            
-            {renderAnimatedSection(
-              <>
-                <div className="w-12 h-12 flex items-center justify-center bg-yunomi-beige rounded-full mb-6">
-                  <svg className="w-6 h-6 text-yunomi-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-medium mb-3">Connect to Internal Systems</h3>
-                <p className="text-gray-600">Trigger workflows, interact with APIs, and retrieve real-time insights from dashboards and analytics tools.</p>
-              </>,
-              { delay: 300, className: "bg-white p-8 rounded-2xl shadow-sm" }
-            )}
-            
-            {renderAnimatedSection(
-              <>
-                <div className="w-12 h-12 flex items-center justify-center bg-yunomi-beige rounded-full mb-6">
-                  <svg className="w-6 h-6 text-yunomi-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-medium mb-3">Search the Web & Think Critically</h3>
-                <p className="text-gray-600">Actively search the web, validate information, and synthesize research across sources — like a human analyst.</p>
-              </>,
-              { delay: 400, className: "bg-white p-8 rounded-2xl shadow-sm" }
-            )}
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
-            {renderAnimatedSection(
-              <>
-                <div className="w-12 h-12 flex items-center justify-center bg-yunomi-beige rounded-full mb-6">
-                  <svg className="w-6 h-6 text-yunomi-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-medium mb-3">Collaborate Like a Teammate</h3>
-                <p className="text-gray-600">Support strategic decisions with memory, feedback loops, and context awareness across use cases.</p>
-              </>,
-              { delay: 500, className: "bg-white p-8 rounded-2xl shadow-sm" }
-            )}
-            
-            {renderAnimatedSection(
-              <>
-                <div className="w-12 h-12 flex items-center justify-center bg-yunomi-beige rounded-full mb-6">
-                  <svg className="w-6 h-6 text-yunomi-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-medium mb-3">Leverage the Full Power of LLMs</h3>
-                <p className="text-gray-600">Go beyond chat — use LLMs for reasoning, summarization, simulations, comparisons, and agentic workflows.</p>
-              </>,
-              { delay: 600, className: "bg-white p-8 rounded-2xl shadow-sm" }
-            )}
-            
-            {renderAnimatedSection(
-              <>
-                <div className="w-12 h-12 flex items-center justify-center bg-yunomi-beige rounded-full mb-6">
-                  <svg className="w-6 h-6 text-yunomi-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-medium mb-3">Stay Brand-Aligned</h3>
-                <p className="text-gray-600">Assistants are emotionally intelligent, customizable in tone and personality, and always on-brand.</p>
-              </>,
-              { delay: 700, className: "bg-white p-8 rounded-2xl shadow-sm" }
-            )}
-
-            {renderAnimatedSection(
-              <>
-                <div className="w-12 h-12 flex items-center justify-center bg-yunomi-beige rounded-full mb-6">
-                  <svg className="w-6 h-6 text-yunomi-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-medium mb-3">Rich Interactive Experiences</h3>
-                <p className="text-gray-600">Support rich, interactive experiences — from chat to voice to real-time video avatars — creating natural, humanlike interactions wherever your users are.</p>
-              </>,
-              { delay: 800, className: "bg-white p-8 rounded-2xl shadow-sm" }
-            )}
-          </div>
-
-          {renderAnimatedSection(
-            <p className="text-xl text-gray-600 text-center mt-12 italic">
-              As intuitive as a good conversation. As powerful as a full-stack analyst.
-            </p>,
-            { delay: 900 }
-          )}
-        </div>
-      </section>
-      
-      <section className="section-padding with-background-logo">
-        <div className="yunomi-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {renderAnimatedSection(
               <>
@@ -404,6 +347,26 @@ const Index = () => {
               { animation: "slide-in-right", className: "order-1 lg:order-2" }
             )}
           </div>
+        </div>
+      </section>
+      
+      <section className="section-padding with-background-logo">
+        <div className="yunomi-container">
+          {renderAnimatedSection(
+            <>
+              <span className="inline-block px-3 py-1 text-xs font-medium bg-white text-yunomi-brown rounded-full mb-3">Capabilities</span>
+              <h2 className="text-3xl md:text-4xl font-display font-semibold mb-4">What Yunomi Assistants Can Do</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto mb-8">
+                Flexible, powerful, and deeply connected to your world.
+              </p>
+              <p className="text-gray-600 max-w-3xl mx-auto mb-12">
+                From talking to your private data to conducting live web research — Yunomi assistants combine the intelligence of large language models with your unique tools, knowledge, and systems.
+              </p>
+            </>,
+            { className: "text-center mb-16" }
+          )}
+          
+          <CapabilityCarousel capabilities={capabilities} />
         </div>
       </section>
       
