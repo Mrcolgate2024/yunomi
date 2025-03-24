@@ -1,4 +1,5 @@
-import { useEffect, useRef, type ReactNode } from 'react';
+import React, { useEffect, useRef } from 'react';
+import type { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight, LightbulbIcon, Heart, Target, Globe, Play } from 'lucide-react';
 import AnimatedSection from '../components/AnimatedSection';
@@ -14,14 +15,14 @@ const Index = () => {
   };
 
   const assistants = [
-    { name: 'Claire', role: 'HR/Recruitment', imgSrc: '/lovable-uploads/d237131e-351c-4178-a758-18e9019460bb.png', path: '/assistant/hr' },
-    { name: 'Kenji', role: 'Legal Assistant', imgSrc: '/lovable-uploads/87c1bcf7-53cf-40d1-bfc1-960b0231bb87.png', path: '/assistant/legal' },
-    { name: 'Luna', role: 'Marketing', imgSrc: '/lovable-uploads/f982c37f-6bf3-4f34-bc36-602b3f3cc737.png', path: '/assistant/marketing' },
-    { name: 'Omar', role: 'Procurement', imgSrc: '/lovable-uploads/8c0f54dc-423f-4dc7-a6c2-12a648e47173.png', path: '/assistant/procurement' },
-    { name: 'Chase', role: 'Sales Assistant', imgSrc: '/lovable-uploads/ba0fb488-acc4-467b-b1f2-d9572498eabe.png', path: '/assistant/sales' },
-    { name: 'Imani', role: 'Teacher', imgSrc: '/lovable-uploads/ec8d98cf-0922-47f0-b0e8-242798f1623d.png', path: '/assistant/teacher' },
-    { name: 'Elijah', role: 'Financial Assistant', imgSrc: '/lovable-uploads/8e6ce1d4-5959-4e26-8aa5-85f1849e107f.png', path: '/assistant/financial' },
-    { name: 'Aiko', role: 'Customer Support', imgSrc: '/lovable-uploads/1e2074aa-1874-4d73-b503-44b7e26e5876.png', path: '/assistant/support' },
+    { name: 'Claire', role: 'HR/Recruitment', imgSrc: '/lovable-uploads/Claire.webp', path: '/assistant/hr' },
+    { name: 'Kenji', role: 'Legal Assistant', imgSrc: '/lovable-uploads/Kenji3.webp', path: '/assistant/legal' },
+    { name: 'Luna', role: 'Marketing', imgSrc: '/lovable-uploads/Luna.webp', path: '/assistant/marketing' },
+    { name: 'Omar', role: 'Procurement', imgSrc: '/lovable-uploads/Omar.webp', path: '/assistant/procurement' },
+    { name: 'Chase', role: 'Sales Assistant', imgSrc: '/lovable-uploads/Chase.webp', path: '/assistant/sales' },
+    { name: 'Imani', role: 'Teacher', imgSrc: '/lovable-uploads/Imani.webp', path: '/assistant/teacher' },
+    { name: 'Elijah', role: 'Financial Assistant', imgSrc: '/lovable-uploads/Elijah.webp', path: '/assistant/financial' },
+    { name: 'Aiko', role: 'Customer Support', imgSrc: '/lovable-uploads/Aiko.webp', path: '/assistant/support' },
   ];
 
   useEffect(() => {
@@ -131,7 +132,7 @@ const Index = () => {
               <span className="inline-block px-3 py-1 text-xs font-medium bg-white text-yunomi-brown rounded-full mb-3">Our Approach</span>
               <h2 className="text-3xl md:text-4xl font-display font-semibold mb-4">Why Yunomi?</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Our philosophy is rooted in the seamless integration of technology and human connection.
+                Our philosophy is rooted in the seamless integration of technology and human connection, inspired by the quiet harmony of a shared cup of tea.
               </p>
             </>,
             { className: "text-center mb-16" }
@@ -187,13 +188,146 @@ const Index = () => {
       
       <section className="section-padding with-background-logo">
         <div className="yunomi-container">
+          {renderAnimatedSection(
+            <>
+              <span className="inline-block px-3 py-1 text-xs font-medium bg-white text-yunomi-brown rounded-full mb-3">Capabilities</span>
+              <h2 className="text-3xl md:text-4xl font-display font-semibold mb-4">What Yunomi Assistants Can Do</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto mb-8">
+                Flexible, powerful, and deeply connected to your world.
+              </p>
+              <p className="text-gray-600 max-w-3xl mx-auto mb-12">
+                From talking to your private data to conducting live web research — Yunomi assistants combine the intelligence of large language models with your unique tools, knowledge, and systems.
+              </p>
+            </>,
+            { className: "text-center mb-16" }
+          )}
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {renderAnimatedSection(
+              <>
+                <div className="w-12 h-12 flex items-center justify-center bg-yunomi-beige rounded-full mb-6">
+                  <svg className="w-6 h-6 text-yunomi-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-medium mb-3">Talk to Your Data</h3>
+                <p className="text-gray-600">Query structured and unstructured data — Excel sheets, PDFs, SQL databases — using natural language.</p>
+              </>,
+              { delay: 100, className: "bg-white p-8 rounded-2xl shadow-sm" }
+            )}
+            
+            {renderAnimatedSection(
+              <>
+                <div className="w-12 h-12 flex items-center justify-center bg-yunomi-beige rounded-full mb-6">
+                  <svg className="w-6 h-6 text-yunomi-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-medium mb-3">Use Your Knowledge Base</h3>
+                <p className="text-gray-600">Instantly access internal wikis, reports, FAQs, and documentation to provide grounded, company-specific answers.</p>
+              </>,
+              { delay: 200, className: "bg-white p-8 rounded-2xl shadow-sm" }
+            )}
+            
+            {renderAnimatedSection(
+              <>
+                <div className="w-12 h-12 flex items-center justify-center bg-yunomi-beige rounded-full mb-6">
+                  <svg className="w-6 h-6 text-yunomi-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-medium mb-3">Connect to Internal Systems</h3>
+                <p className="text-gray-600">Trigger workflows, interact with APIs, and retrieve real-time insights from dashboards and analytics tools.</p>
+              </>,
+              { delay: 300, className: "bg-white p-8 rounded-2xl shadow-sm" }
+            )}
+            
+            {renderAnimatedSection(
+              <>
+                <div className="w-12 h-12 flex items-center justify-center bg-yunomi-beige rounded-full mb-6">
+                  <svg className="w-6 h-6 text-yunomi-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-medium mb-3">Search the Web & Think Critically</h3>
+                <p className="text-gray-600">Actively search the web, validate information, and synthesize research across sources — like a human analyst.</p>
+              </>,
+              { delay: 400, className: "bg-white p-8 rounded-2xl shadow-sm" }
+            )}
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
+            {renderAnimatedSection(
+              <>
+                <div className="w-12 h-12 flex items-center justify-center bg-yunomi-beige rounded-full mb-6">
+                  <svg className="w-6 h-6 text-yunomi-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-medium mb-3">Collaborate Like a Teammate</h3>
+                <p className="text-gray-600">Support strategic decisions with memory, feedback loops, and context awareness across use cases.</p>
+              </>,
+              { delay: 500, className: "bg-white p-8 rounded-2xl shadow-sm" }
+            )}
+            
+            {renderAnimatedSection(
+              <>
+                <div className="w-12 h-12 flex items-center justify-center bg-yunomi-beige rounded-full mb-6">
+                  <svg className="w-6 h-6 text-yunomi-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-medium mb-3">Leverage the Full Power of LLMs</h3>
+                <p className="text-gray-600">Go beyond chat — use LLMs for reasoning, summarization, simulations, comparisons, and agentic workflows.</p>
+              </>,
+              { delay: 600, className: "bg-white p-8 rounded-2xl shadow-sm" }
+            )}
+            
+            {renderAnimatedSection(
+              <>
+                <div className="w-12 h-12 flex items-center justify-center bg-yunomi-beige rounded-full mb-6">
+                  <svg className="w-6 h-6 text-yunomi-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-medium mb-3">Stay Brand-Aligned</h3>
+                <p className="text-gray-600">Assistants are emotionally intelligent, customizable in tone and personality, and always on-brand.</p>
+              </>,
+              { delay: 700, className: "bg-white p-8 rounded-2xl shadow-sm" }
+            )}
+
+            {renderAnimatedSection(
+              <>
+                <div className="w-12 h-12 flex items-center justify-center bg-yunomi-beige rounded-full mb-6">
+                  <svg className="w-6 h-6 text-yunomi-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-medium mb-3">Rich Interactive Experiences</h3>
+                <p className="text-gray-600">Support rich, interactive experiences — from chat to voice to real-time video avatars — creating natural, humanlike interactions wherever your users are.</p>
+              </>,
+              { delay: 800, className: "bg-white p-8 rounded-2xl shadow-sm" }
+            )}
+          </div>
+
+          {renderAnimatedSection(
+            <p className="text-xl text-gray-600 text-center mt-12 italic">
+              As intuitive as a good conversation. As powerful as a full-stack analyst.
+            </p>,
+            { delay: 900 }
+          )}
+        </div>
+      </section>
+      
+      <section className="section-padding with-background-logo">
+        <div className="yunomi-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {renderAnimatedSection(
               <>
                 <span className="inline-block px-3 py-1 text-xs font-medium bg-yunomi-beige text-yunomi-brown rounded-full mb-3">Use Case</span>
                 <h2 className="text-3xl md:text-4xl font-display font-semibold mb-4">See Yunomi in Action</h2>
                 <p className="text-gray-600 mb-6">
-                  Here's how our Financial Assistant helps users navigate complex retirement questions at Stashly.
+                  How $tashly uses a Yunomi Financial Assistant to empower smarter investment decisions:
                 </p>
                 
                 <div className="space-y-4 mb-8">
@@ -201,21 +335,30 @@ const Index = () => {
                     <div className="flex-shrink-0 w-6 h-6 rounded-full bg-yunomi-beige flex items-center justify-center mt-1">
                       <span className="text-yunomi-brown font-medium text-sm">1</span>
                     </div>
-                    <p className="ml-3 text-gray-600">Personalized financial guidance with the warmth of human interaction</p>
+                    <div className="ml-3">
+                      <p className="text-gray-600 font-semibold">Conversational AI that speaks finance — and understands your data.</p>
+                      <p className="text-gray-600 mt-1">From market trends to portfolio allocations, $tashly's assistant uses live data to deliver personalized advice in plain English.</p>
+                    </div>
                   </div>
                   
                   <div className="flex items-start">
                     <div className="flex-shrink-0 w-6 h-6 rounded-full bg-yunomi-beige flex items-center justify-center mt-1">
                       <span className="text-yunomi-brown font-medium text-sm">2</span>
                     </div>
-                    <p className="ml-3 text-gray-600">Complex financial analysis delivered through simple, accessible conversations</p>
+                    <div className="ml-3">
+                      <p className="text-gray-600 font-semibold">From strategy to execution — all in one chat.</p>
+                      <p className="text-gray-600 mt-1">Whether it's building a portfolio, analyzing performance, or exploring new investment strategies, $tashly users get actionable insights without needing a spreadsheet.</p>
+                    </div>
                   </div>
                   
                   <div className="flex items-start">
                     <div className="flex-shrink-0 w-6 h-6 rounded-full bg-yunomi-beige flex items-center justify-center mt-1">
                       <span className="text-yunomi-brown font-medium text-sm">3</span>
                     </div>
-                    <p className="ml-3 text-gray-600">Consistent reliability with a familiar face users can trust</p>
+                    <div className="ml-3">
+                      <p className="text-gray-600 font-semibold">Always here, always supportive — your financial co-pilot.</p>
+                      <p className="text-gray-600 mt-1">With a warm, interactive presence, the assistant is available 24/7 to collaborate, guide, and encourage users as they navigate even the most complex financial decisions.</p>
+                    </div>
                   </div>
                 </div>
                 
