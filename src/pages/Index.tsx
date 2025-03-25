@@ -325,7 +325,6 @@ const Index = () => {
                 <div className="relative rounded-xl overflow-hidden shadow-xl">
                   <video 
                     src="/lovable-uploads/Financialassistantvideo.mp4"
-                    poster="/lovable-uploads/8e6ce1d4-5959-4e26-8aa5-85f1849e107f.png"
                     autoPlay
                     loop
                     muted
