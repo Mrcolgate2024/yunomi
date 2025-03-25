@@ -393,7 +393,7 @@ const Index = () => {
                   Meet Our Assistants
                 </Link>
                 <a
-                  href="mailto:contact@yunomi.ai"
+                  href="mailto:contact.yunomi@gmail.com"
                   className="px-8 py-4 border border-yunomi-brown text-yunomi-brown rounded-full font-medium transition-all duration-300 hover:bg-yunomi-brown hover:text-white hover:shadow-lg hover:translate-y-[-2px] focus:outline-none focus:ring-2 focus:ring-yunomi-brown focus:ring-opacity-50"
                 >
                   Contact Us

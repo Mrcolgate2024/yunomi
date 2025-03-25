@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { Linkedin, Mail } from 'lucide-react';
 
@@ -32,11 +31,11 @@ const Footer = () => {
             <h4 className="text-base font-medium">Contact Us</h4>
             <div className="space-y-2">
               <a 
-                href="mailto:contact@yunomi.ai" 
+                href="mailto:contact.yunomi@gmail.com" 
                 className="flex items-center text-sm text-gray-600 hover:text-yunomi-brown transition-colors"
               >
                 <Mail className="w-4 h-4 mr-2" />
-                contact@yunomi.ai
+                contact.yunomi@gmail.com
               </a>
               <a 
                 href="https://linkedin.com" 
