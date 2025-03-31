@@ -42,9 +42,9 @@ const AssistantLayout = ({
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <AnimatedSection animation="slide-in-right" className="order-1">
-              <div className="relative mb-8 lg:mb-0">
-                <div className="absolute -inset-4 bg-yunomi-beige rounded-full transform rotate-3 opacity-70"></div>
-                <div className="absolute -inset-4 bg-white rounded-full transform -rotate-3 opacity-50"></div>
+              <div className="relative mb-8 lg:mb-0 w-full max-w-[80%] mx-auto">
+                <div className="absolute -inset-[1%] bg-yunomi-beige rounded-full transform rotate-3 opacity-70"></div>
+                <div className="absolute -inset-[1%] bg-white rounded-full transform -rotate-3 opacity-50"></div>
                 <div className="relative rounded-full overflow-hidden aspect-square shadow-xl">
                   <img 
                     src={imageSrc} 
