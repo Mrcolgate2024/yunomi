@@ -1,4 +1,5 @@
-import { useState } from 'react';
+
+import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
@@ -11,7 +12,7 @@ interface AssistantCardProps {
 }
 
 const AssistantCard = ({ name, role, imgSrc, path, delay = 0 }: AssistantCardProps) => {
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered, setIsHovered] = React.useState(false);
 
   return (
     <motion.div

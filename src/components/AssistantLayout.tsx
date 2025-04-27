@@ -1,4 +1,5 @@
-import { ReactNode } from 'react';
+
+import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronLeft } from 'lucide-react';
 import Navbar from './Navbar';
@@ -6,7 +7,7 @@ import Footer from './Footer';
 import AnimatedSection from './AnimatedSection';
 
 interface AssistantLayoutProps {
-  children: ReactNode;
+  children: React.ReactNode;
   title: string;
   subtitle: string;
   imageSrc: string;
@@ -14,7 +15,7 @@ interface AssistantLayoutProps {
   previousLabel?: string;
   nextPath?: string;
   nextLabel?: string;
-  imageOverlay?: ReactNode;
+  imageOverlay?: React.ReactNode;
 }
 
 const AssistantLayout = ({

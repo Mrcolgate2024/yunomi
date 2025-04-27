@@ -1,11 +1,17 @@
+
+// This file is needed to make TypeScript happy with our JSX usage
+import * as React from 'react';
+
 declare module 'react' {
-  export * from '@types/react';
+  export = React;
 }
 
-declare module '@types/react' {
-  export interface ReactElement<P = any, T extends string | JSXElementConstructor<any> = string | JSXElementConstructor<any>> {
-    type: T;
-    props: P;
-    key: Key | null;
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      'elevenlabs-convai': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & {
+        'agent-id'?: string;
+      };
+    }
   }
-} 
+}

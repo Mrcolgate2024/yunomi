@@ -1,8 +1,8 @@
 
-import { useEffect, useRef, ReactNode } from 'react';
+import * as React from 'react';
 
 interface AnimatedSectionProps {
-  children: ReactNode;
+  children: React.ReactNode;
   className?: string;
   animation?: 'fade-in' | 'fade-in-up' | 'fade-in-down' | 'scale-in' | 'slide-in-right' | 'slide-in-left';
   delay?: number;
@@ -14,9 +14,9 @@ const AnimatedSection = ({
   animation = 'fade-in-up',
   delay = 0
 }: AnimatedSectionProps) => {
-  const sectionRef = useRef<HTMLDivElement>(null);
+  const sectionRef = React.useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {

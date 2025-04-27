@@ -1,11 +1,11 @@
 
-import { useState, useEffect } from 'react';
+import * as React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = React.useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const location = useLocation();
 
   // Navigation items array
@@ -21,7 +21,7 @@ const Navbar = () => {
     { name: 'Support', path: '/assistant/support' },
   ];
 
-  useEffect(() => {
+  React.useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
         setIsScrolled(true);
@@ -34,7 +34,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
+  React.useEffect(() => {
     // Close mobile menu when route changes
     setIsMobileMenuOpen(false);
   }, [location.pathname]);
