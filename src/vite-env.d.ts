@@ -36,3 +36,12 @@ declare module '*.gif' {
   const content: string
   export default content
 }
+
+// Add type declaration for the custom element
+declare namespace JSX {
+  interface IntrinsicElements {
+    'elevenlabs-convai': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & {
+      'agent-id'?: string;
+    };
+  }
+}

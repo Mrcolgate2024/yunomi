@@ -1,4 +1,3 @@
-
 import { CheckCircle } from 'lucide-react';
 import AssistantLayout from './AssistantLayout';
 import AnimatedSection from './AnimatedSection';
@@ -31,6 +30,7 @@ interface GenericAssistantPageProps {
   previousLabel?: string;
   nextPath?: string;
   nextLabel?: string;
+  imageOverlay?: React.ReactNode;
 }
 
 const GenericAssistantPage = ({
@@ -44,6 +44,7 @@ const GenericAssistantPage = ({
   previousLabel,
   nextPath,
   nextLabel,
+  imageOverlay,
 }: GenericAssistantPageProps) => {
   return (
     <AssistantLayout
@@ -54,6 +55,7 @@ const GenericAssistantPage = ({
       previousLabel={previousLabel}
       nextPath={nextPath}
       nextLabel={nextLabel}
+      imageOverlay={imageOverlay}
     >
       <div className="space-y-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
