@@ -3,7 +3,7 @@ import AssistantLayout from './AssistantLayout';
 import AnimatedSection from './AnimatedSection';
 
 interface FeatureItem {
-  icon: React.ReactNode;
+  icon: JSX.Element;
   title: string;
   description: string;
 }
@@ -30,7 +30,8 @@ interface GenericAssistantPageProps {
   previousLabel?: string;
   nextPath?: string;
   nextLabel?: string;
-  imageOverlay?: React.ReactNode;
+  imageOverlay?: JSX.Element;
+  children?: JSX.Element;
 }
 
 const GenericAssistantPage = ({
@@ -45,6 +46,7 @@ const GenericAssistantPage = ({
   nextPath,
   nextLabel,
   imageOverlay,
+  children,
 }: GenericAssistantPageProps) => {
   return (
     <AssistantLayout
@@ -80,7 +82,7 @@ const GenericAssistantPage = ({
           </div>
         </AnimatedSection>
         
-        <AnimatedSection delay={400} className="bg-white p-8 rounded-xl shadow-sm">
+        <AnimatedSection delay={400}>
           <blockquote className="relative">
             <div className="text-3xl text-yunomi-brown opacity-30 absolute top-0 left-0">"</div>
             <p className="text-gray-600 italic text-lg pl-6">
@@ -92,6 +94,8 @@ const GenericAssistantPage = ({
             </footer>
           </blockquote>
         </AnimatedSection>
+
+        {children}
       </div>
     </AssistantLayout>
   );

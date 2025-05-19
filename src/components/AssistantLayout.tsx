@@ -43,8 +43,8 @@ const AssistantLayout = ({
           </Link>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <AnimatedSection animation="slide-in-right" className="order-2 lg:order-1">
-              <div className="relative mb-8 lg:mb-0">
+            <AnimatedSection animation="slide-in-right" className="order-1">
+              <div className="relative mb-8 lg:mb-0 w-[80%] mx-auto">
                 <div className="absolute -inset-4 bg-yunomi-beige rounded-full transform rotate-3 opacity-70"></div>
                 <div className="absolute -inset-4 bg-white rounded-full transform -rotate-3 opacity-50"></div>
                 <div className="relative rounded-full overflow-hidden aspect-square shadow-xl">
@@ -58,14 +58,14 @@ const AssistantLayout = ({
               </div>
             </AnimatedSection>
             
-            <AnimatedSection animation="slide-in-left" className="order-1 lg:order-2">
+            <AnimatedSection animation="slide-in-left" className="order-2">
               <span className="inline-block px-3 py-1 text-xs font-medium bg-white text-yunomi-brown rounded-full mb-3">
                 Yunomi Assistant
               </span>
               <h1 className="text-3xl md:text-5xl font-display font-semibold mb-4">{title}</h1>
               <p className="text-lg text-gray-600 mb-6">{subtitle}</p>
               
-              <div className="mt-8">
+              <div className="space-y-8">
                 {children}
               </div>
               
