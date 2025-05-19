@@ -1,4 +1,4 @@
-import { TrendingUp, BarChart, Target, MessageCircle } from 'lucide-react';
+import { TrendingUp, BarChart, Target, MessageCircle, Play } from 'lucide-react';
 import GenericAssistantPage from '../components/GenericAssistantPage';
 
 const MarketingAssistant = () => {
@@ -6,7 +6,7 @@ const MarketingAssistant = () => {
     <GenericAssistantPage
       title="Marketing Assistant"
       subtitle="Luna creates compelling marketing campaigns with creative content development and audience engagement strategies."
-      imageSrc="/lovable-uploads/f982c37f-6bf3-4f34-bc36-602b3f3cc737.png"
+      imageSrc="/lovable-uploads/Lunaprofile.webp"
       previousPath="/assistant/procurement"
       previousLabel="Procurement Assistant"
       nextPath="/assistant/support"
@@ -46,7 +46,26 @@ const MarketingAssistant = () => {
         position: "Marketing Director",
         company: "Elevate Brands"
       }}
-    />
+    >
+      <div className="mt-12">
+        <a 
+          href="https://www.youtube.com/watch?v=i-ScGu3gCtk" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="group bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 block max-w-2xl mx-auto"
+        >
+          <div className="flex items-center space-x-4">
+            <div className="w-12 h-12 bg-yunomi-beige rounded-full flex items-center justify-center group-hover:bg-yunomi-brown group-hover:text-white transition-colors duration-300">
+              <Play className="w-6 h-6" />
+            </div>
+            <div>
+              <h3 className="text-lg font-medium group-hover:text-yunomi-brown transition-colors duration-300">Learn to Create AI Videos</h3>
+              <p className="text-gray-600 mt-1">Watch how to generate videos with HeyGen using our AI agents</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </GenericAssistantPage>
   );
 };
 
