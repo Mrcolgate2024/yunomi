@@ -1,3 +1,4 @@
+
 import React, { useState, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
@@ -18,22 +19,23 @@ const CapabilityCarousel: React.FC<CapabilityCarouselProps> = ({ capabilities })
   const itemsPerPage = 4;
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => 
+    setCurrentIndex((prevIndex: number) => 
       prevIndex + itemsPerPage >= capabilities.length ? 0 : prevIndex + itemsPerPage
     );
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => 
+    setCurrentIndex((prevIndex: number) => 
       prevIndex - itemsPerPage < 0 ? Math.max(0, capabilities.length - itemsPerPage) : prevIndex - itemsPerPage
     );
   };
 
-  const handleTouchStart = (e: React.TouchEvent) => {
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
     const touch = e.touches[0];
     const startX = touch.clientX;
     
     const handleTouchMove = (e: TouchEvent) => {
+      if (!e.touches[0]) return;
       const touch = e.touches[0];
       const diff = startX - touch.clientX;
       
@@ -48,6 +50,14 @@ const CapabilityCarousel: React.FC<CapabilityCarouselProps> = ({ capabilities })
     };
     
     document.addEventListener('touchmove', handleTouchMove);
+    
+    // Add a cleanup function for the touch event
+    const handleTouchEnd = () => {
+      document.removeEventListener('touchmove', handleTouchMove);
+      document.removeEventListener('touchend', handleTouchEnd);
+    };
+    
+    document.addEventListener('touchend', handleTouchEnd);
   };
 
   const visibleCapabilities = capabilities.slice(currentIndex, currentIndex + itemsPerPage);
@@ -106,4 +116,4 @@ const CapabilityCarousel: React.FC<CapabilityCarouselProps> = ({ capabilities })
   );
 };
 
-export default CapabilityCarousel; 
+export default CapabilityCarousel;

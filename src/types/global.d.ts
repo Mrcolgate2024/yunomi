@@ -1,32 +1,53 @@
+
 /// <reference types="react" />
 /// <reference types="react-dom" />
 
-declare namespace React {
-  interface ReactElement<P = any, T extends string | JSXElementConstructor<any> = string | JSXElementConstructor<any>> {
-    type: T;
-    props: P;
-    key: Key | null;
-  }
+// Define additional global React interfaces
+interface ReactElementType<P = any, T extends string | JSXElementConstructor<any> = string | JSXElementConstructor<any>> {
+  type: T;
+  props: P;
+  key: React.Key | null;
+}
 
-  type ComponentType<P = {}> = ComponentClass<P> | FunctionComponent<P>;
-  type ElementType<P = any> = {
-    [K in keyof JSX.IntrinsicElements]: P extends JSX.IntrinsicElements[K] ? K : never
-  }[keyof JSX.IntrinsicElements] | ComponentType<P>;
-  type ComponentProps<T extends ElementType> = T extends ComponentClass<infer P>
-    ? P
-    : T extends FunctionComponent<infer P>
-    ? P
-    : T extends keyof JSX.IntrinsicElements
-    ? JSX.IntrinsicElements[T]
-    : never;
+// Ensure ReactNode includes proper ReactElement definitions
+type ReactNode = 
+  | ReactElement<any, string | JSXElementConstructor<any>>
+  | ReactPortal
+  | string
+  | number
+  | boolean
+  | null
+  | undefined
+  | Iterable<ReactNode>;
 
-  interface FunctionComponent<P = {}> {
-    (props: P, context?: any): ReactElement<any, any> | null;
-    displayName?: string;
-  }
+// Make ReactPortal's children optional
+interface ReactPortal {
+  children?: ReactNode;
+  key: React.Key | null;
+  type: any;
+  props: any;
+}
 
-  interface ComponentClass<P = {}, S = ComponentState> extends StaticLifecycle<P, S> {
-    new(props: P, context?: any): Component<P, S>;
-    displayName?: string;
+// Add support for Radix UI component types
+declare module '@radix-ui/react-tooltip' {
+  export interface TooltipProviderProps {
+    children?: React.ReactNode;
+    [key: string]: any;
   }
-} 
+  export const TooltipProvider: React.FC<TooltipProviderProps>;
+}
+
+declare module '@radix-ui/react-dialog' {
+  export interface DialogPortalProps {
+    children?: React.ReactNode;
+    [key: string]: any;
+  }
+  export const Dialog: React.FC<{ children?: React.ReactNode }>;
+  export const DialogPortal: React.FC<DialogPortalProps>;
+  export const DialogOverlay: React.FC<{ className?: string; [key: string]: any }>;
+  export const DialogContent: React.FC<{ className?: string; children?: React.ReactNode; [key: string]: any }>;
+  export const DialogTrigger: React.FC<{ asChild?: boolean; children?: React.ReactNode; [key: string]: any }>;
+  export const DialogClose: React.FC<{ asChild?: boolean; children?: React.ReactNode; [key: string]: any }>;
+  export const DialogTitle: React.FC<{ className?: string; children?: React.ReactNode; [key: string]: any }>;
+  export const DialogDescription: React.FC<{ className?: string; children?: React.ReactNode; [key: string]: any }>;
+}

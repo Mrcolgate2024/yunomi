@@ -1,9 +1,10 @@
+
 import { CheckCircle } from 'lucide-react';
 import AssistantLayout from './AssistantLayout';
 import AnimatedSection from './AnimatedSection';
 
 interface FeatureItem {
-  icon: JSX.Element;
+  icon: React.ReactElement;
   title: string;
   description: string;
 }
@@ -30,8 +31,8 @@ interface GenericAssistantPageProps {
   previousLabel?: string;
   nextPath?: string;
   nextLabel?: string;
-  imageOverlay?: JSX.Element;
-  children?: JSX.Element;
+  imageOverlay?: React.ReactElement;
+  children?: React.ReactNode;
 }
 
 const GenericAssistantPage = ({

@@ -20,10 +20,12 @@ const AnimatedSection = ({
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
+          if (entry.isIntersecting && sectionRef.current) {
             setTimeout(() => {
-              entry.target.classList.add(`animate-${animation}`);
-              entry.target.classList.remove('opacity-0');
+              if (sectionRef.current) {
+                sectionRef.current.classList.add(`animate-${animation}`);
+                sectionRef.current.classList.remove('opacity-0');
+              }
               observer.unobserve(entry.target);
             }, delay);
           }
