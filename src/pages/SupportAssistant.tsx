@@ -190,7 +190,43 @@ const SupportAssistant = () => {
             )}
           </div>
         }
-      />
+      >
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <a 
+            href="https://youtu.be/e_7IulBMF-Q?si=D8tl5JDuufHty_FB" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="group bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
+          >
+            <div className="flex items-center space-x-4">
+              <div className="w-12 h-12 bg-yunomi-beige rounded-full flex items-center justify-center group-hover:bg-yunomi-brown group-hover:text-white transition-colors duration-300">
+                <Play className="w-6 h-6" />
+              </div>
+              <div>
+                <h3 className="text-lg font-medium group-hover:text-yunomi-brown transition-colors duration-300">Watch Aiko in Action</h3>
+                <p className="text-gray-600 mt-1">See Aiko talk about skiing in Japan</p>
+              </div>
+            </div>
+          </a>
+
+          <a 
+            href="https://akool.com/apps/streaming-avatar/share/aIqXgmreqJ" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="group bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
+          >
+            <div className="flex items-center space-x-4">
+              <div className="w-12 h-12 bg-yunomi-beige rounded-full flex items-center justify-center group-hover:bg-yunomi-brown group-hover:text-white transition-colors duration-300">
+                <MessageCircle className="w-6 h-6" />
+              </div>
+              <div>
+                <h3 className="text-lg font-medium group-hover:text-yunomi-brown transition-colors duration-300">Chat with Aiko Live</h3>
+                <p className="text-gray-600 mt-1">Experience Aiko's support capabilities firsthand</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </GenericAssistantPage>
       <div ref={widgetRef} style={{ position: 'fixed', bottom: '20px', right: '20px', zIndex: 1000 }} />
     </div>
   );
